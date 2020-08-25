@@ -15,7 +15,7 @@ const Preguntas = props => {
                         <div className="opcion" key={op.opcion}>
                             <button onClick={() => {
                                 props.revisar(op.opcion, respuesta)
-                            }}>{`${op.opcion}: ${op.texto}`}
+                            }}>{`${op.opcion}) ${op.texto}`}
                             </button>
                         </div>
                     ))
