@@ -4,8 +4,6 @@ import Resultados from './Resultados'
 import MenuPrincipal from './MenuPrincipal'
 import listado from '../Preguntas'
 
-
-
 const Main = () => {
 
     const [estado, setEstado] = useState('');

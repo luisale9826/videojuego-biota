@@ -1,0 +1,10 @@
+.resultados-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.resultados-container > .titulo {
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+}
