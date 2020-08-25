@@ -51,8 +51,8 @@
     .preguntas-container .pregunta {
         color: #ffffff;
         padding-left: 0px;
-        text-align: justify;
-        grid-column: 1/-1;
+        text-align: center;
+        grid-column: 1/1;
         font-size: 30px;
     }
     .preguntas-container {
