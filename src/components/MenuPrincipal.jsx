@@ -3,11 +3,19 @@ import fondo from '../img/imagen-sin-texto.svg'
 import logoBiota from '../img/logo-biota.png'
 import '../styles/MenuPrincipal.css'
 
+const styles = `
+body{
+    background-image: url(${fondo});
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+}`;
+
 const MenuPrincipal = ({ iniciar }) => {
     return (
         <div>
             <div className="menu-container">
-                <style>{`body{ background-image: url(${fondo})}`}</style>
+                <style>{styles}</style>
                 <h1 className="title">Main</h1>
                 <div className="boton">
                     <button className="btn" onClick={iniciar}>Iniciar</button>
