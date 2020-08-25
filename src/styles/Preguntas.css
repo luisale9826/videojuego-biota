@@ -45,3 +45,25 @@
     display: inline-block;
     cursor: pointer;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .preguntas-container .pregunta {
+        color: #ffffff;
+        padding-left: 0px;
+        text-align: justify;
+        grid-column: 1/-1;
+        font-size: 30px;
+    }
+    .preguntas-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .preguntas-container > .opcion {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
