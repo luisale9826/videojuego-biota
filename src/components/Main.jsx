@@ -4,12 +4,12 @@ import Resultados from './Resultados'
 import MenuPrincipal from './MenuPrincipal'
 import listado from '../Preguntas'
 import DatosCuriosos from './DatosCuriosos'
+import '../styles/Main.css'
 
 const Main = () => {
 
     const [estado, setEstado] = useState('');
     const [indiceActual, setIndiceActual] = useState(0);
-    // const [puntuacion, setPuntuacion] = useState(0)
 
     let contenido = null;
 
@@ -30,6 +30,11 @@ const Main = () => {
         setEstado('iniciado')
     }
 
+    const reiniciar = () => {
+        setIndiceActual(0)
+        setEstado('')
+    }
+
     switch (estado) {
         case 'iniciado':
             contenido = <Preguntas preguntaActual={listado[indiceActual]} revisar={revisar} />
@@ -38,7 +43,7 @@ const Main = () => {
             contenido = <DatosCuriosos siguientePregunta={siguientePregunta} />
             break;
         case 'finalizado':
-            contenido = <Resultados />
+            contenido = <Resultados reiniciar={reiniciar} puntaje = {(indiceActual) * 1000} />
             break;
         default:
             contenido = <MenuPrincipal iniciar={iniciar} />

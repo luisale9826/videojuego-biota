@@ -15,34 +15,6 @@
     margin-top: 5%;
 }
 
-.menu-container .boton > button {
-    width: 300px;
-    height: auto;
-    font-size: 25px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.menu-container .boton > button:hover {
-    width: 300px;
-    height: auto;
-    font-size: 25px;
-    box-shadow: 0 5px 15px rgba(255, 255, 255, .4);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-}
-
 .menu-container > .images img {
     width: 300px;
     height: auto;
