@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import fondo from '../img/final-desenfoque.svg'
 import '../styles/Preguntas.css'
-import { CSSTransition } from 'react-transition-group';
 
 const styles = `
 body{
