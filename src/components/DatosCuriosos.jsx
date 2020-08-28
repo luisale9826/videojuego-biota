@@ -1,5 +1,14 @@
 import React from 'react';
+import fondo from '../img/final-desenfoque.svg'
 import '../styles/DatosCuriosos.css'
+
+const styles = `
+body{
+    background-image: url(${fondo});
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+}`;
 
 const DatosCuriosos = props => {
 
@@ -9,6 +18,7 @@ const DatosCuriosos = props => {
 
     return (
         <div className="datos-curiosos-container">
+            <style>{styles}</style>
             <div className="titulo">
                 <h1>¿Sabías qué?</h1>
             </div>
