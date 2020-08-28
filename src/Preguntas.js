@@ -1,47 +1,77 @@
 const listado = [
   {
     numero: 0,
-    pregunta: '¿Cuál de las siguientes opciones es un anfibio?',
+    pregunta: '¿En qué cantón se encuentra el distrito de Tayutic?',
     opciones: [
       {
         opcion: 'A',
-        texto: 'Rana',
+        texto: 'Jiménez',
       },
       {
         opcion: 'B',
-        texto: 'Cocodrilo',
+        texto: 'Turrialba',
       },
       {
         opcion: 'C',
-        texto: 'Oso',
+        texto: 'Alvarado',
+      }
+    ],
+    respuesta: 'B',
+  },
+  {
+    numero: 1,
+    pregunta: '¿En qué cantón se encuentra el distrito de Cachí?',
+    opciones: [
+      {
+        opcion: 'A',
+        texto: 'Paraíso',
       },
       {
-        opcion: 'D',
-        texto: 'T-Rex',
+        opcion: 'B',
+        texto: 'Cartago',
       },
+      {
+        opcion: 'C',
+        texto: 'Jiménez',
+      }
     ],
     respuesta: 'A',
   },
   {
-    numero: 1,
-    pregunta: '¿Cuál de las siguientes opciones es un mamífero?',
+    numero: 2,
+    pregunta: '¿En qué cantón se encuentra el distrito de Agua Caliente?',
     opciones: [
       {
         opcion: 'A',
-        texto: 'Rana',
+        texto: 'Cartago',
       },
       {
         opcion: 'B',
-        texto: 'Cocodrilo',
+        texto: 'El Guarco',
       },
       {
         opcion: 'C',
-        texto: 'Oso',
+        texto: 'Oreamuno',
+      }
+    ],
+    respuesta: 'A',
+  },
+  {
+    numero: 3,
+    pregunta: '¿Cuál de los siguientes cantones es el de mayor extensión territorial?',
+    opciones: [
+      {
+        opcion: 'A',
+        texto: 'Cartago',
       },
       {
-        opcion: 'D',
-        texto: 'T-Rex',
+        opcion: 'B',
+        texto: 'Paraíso',
       },
+      {
+        opcion: 'C',
+        texto: 'Turrialba',
+      }
     ],
     respuesta: 'C',
   }

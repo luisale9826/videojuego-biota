@@ -1,12 +1,12 @@
 .preguntas-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .preguntas-container .pregunta {
     color: #ffffff;
     text-align: justify;
-    grid-column: 1/5;
+    grid-column: 1/4;
     padding: 70px 0px 70px 200px;
     font-size: 50px;
 }

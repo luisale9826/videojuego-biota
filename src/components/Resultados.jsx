@@ -13,6 +13,7 @@ body{
 const Resultados = props => {
     return (
         <div className="resultados-container">
+            <h1 className="juego-terminado">Juego Terminado</h1>
             <h1 className="titulo">Resultados</h1>
             <style>{styles}</style>
         </div>

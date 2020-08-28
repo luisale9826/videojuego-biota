@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import fondo from '../img/final-desenfoque.svg'
 import '../styles/Preguntas.css'
+import { CSSTransition } from 'react-transition-group';
 
 const styles = `
 body{
@@ -10,8 +11,14 @@ body{
     width: auto;
 }`;
 
+
 const Preguntas = props => {
     const { pregunta, opciones, respuesta } = props.preguntaActual
+
+    const esCorrecto = (opcionUsuario, respuestaPregunta) => {
+        props.revisar(opcionUsuario, respuestaPregunta)
+    }
+
     return (
         <div className="preguntas-container">
             <article className="pregunta">
@@ -22,7 +29,7 @@ const Preguntas = props => {
                 opciones.map((op) => (
                     <div className="opcion" key={op.opcion}>
                         <button onClick={() => {
-                            props.revisar(op.opcion, respuesta)
+                            esCorrecto(op.opcion, respuesta)
                         }}>{`${op.opcion}) ${op.texto}`}
                         </button>
                     </div>
