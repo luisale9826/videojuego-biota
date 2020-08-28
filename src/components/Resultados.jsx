@@ -14,11 +14,11 @@ const Resultados = props => {
     return (
         <div className="resultados-container">
             <style>{styles}</style>
-            <div>
-                <h1 className="juego-terminado">Juego Terminado</h1>
+            <div className="juego-terminado">
+                <h1>Juego Terminado</h1>
             </div>
-            <div>
-                <h1 className="titulo">Puntaje</h1>
+            <div  className="titulo">
+                <h1>Puntaje</h1>
             </div>
             <div className="puntaje">
                 <h2>{props.puntaje}</h2>
