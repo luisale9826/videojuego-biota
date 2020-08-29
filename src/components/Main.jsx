@@ -5,6 +5,7 @@ import MenuPrincipal from './MenuPrincipal'
 import listado from '../Preguntas'
 import DatosCuriosos from './DatosCuriosos'
 import '../styles/Main.css'
+import Informe from './Informe'
 
 const Main = () => {
 
@@ -14,20 +15,20 @@ const Main = () => {
     let contenido = null;
 
     const iniciar = () => {
-        setEstado('iniciado')
+        setEstado('pregunta')
     }
 
     const revisar = (respuestaUsuario, respuesta) => {
         if (respuestaUsuario !== respuesta || listado.length - 1 === indiceActual) {
-            setEstado('finalizado')
+            setEstado('error')
         } else {
-            setEstado('dato')
+            setEstado('correcto')
         }
     }
 
     const siguientePregunta = () => {
         setIndiceActual(indiceActual + 1)
-        setEstado('iniciado')
+        setEstado('pregunta')
     }
 
     const reiniciar = () => {
@@ -39,11 +40,23 @@ const Main = () => {
         case 'iniciado':
             contenido = <Preguntas preguntaActual={listado[indiceActual]} revisar={revisar} />
             break;
+        case 'error':
+            contenido = <Informe informe={"error"} />
+            setTimeout(() => setEstado("finalizado"), 3000)
+            break;
+        case 'correcto':
+            contenido = <Informe informe={"correcto"} />
+            setTimeout(() => setEstado("dato"), 3000)
+            break;
+        case 'pregunta':
+            contenido = <Informe informe={"pregunta"} preguntaActual={indiceActual + 1} totalPreguntas={listado.length} />
+            setTimeout(() => setEstado("iniciado"), 3000)
+            break;
         case 'dato':
             contenido = <DatosCuriosos siguientePregunta={siguientePregunta} />
             break;
         case 'finalizado':
-            contenido = <Resultados reiniciar={reiniciar} puntaje = {(indiceActual) * 1000} />
+            contenido = <Resultados reiniciar={reiniciar} puntaje={(indiceActual) * 1000} />
             break;
         default:
             contenido = <MenuPrincipal iniciar={iniciar} />
