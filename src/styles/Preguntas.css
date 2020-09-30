@@ -3,11 +3,19 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.preguntas-container .adicionales {
+    color: #ffffff;
+    text-align: center;
+    grid-column: 1/4;
+    padding: 70px 100px 30px 100px;
+    font-size: 40px;
+}
+
 .preguntas-container .pregunta {
     color: #ffffff;
     text-align: center;
     grid-column: 1/4;
-    padding: 70px 100px 70px 100px;
+    padding: 50px 100px 70px 100px;
     font-size: 50px;
 }
 
@@ -22,8 +30,17 @@
     .preguntas-container .pregunta {
         color: #ffffff;
         text-align: center;
+        padding-bottom: 10px;
+        padding-top: 10px;
         grid-column: 1/1;
-        font-size: 30px;
+        font-size: 20px;
+    }
+    .preguntas-container .adicionales {
+        color: #ffffff;
+        text-align: center;
+        grid-column: 1/1;
+        padding-top: 10px;
+        font-size: 20px;
     }
     .preguntas-container {
         display: grid;

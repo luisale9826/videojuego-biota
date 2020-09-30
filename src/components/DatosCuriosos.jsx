@@ -10,7 +10,7 @@ body{
     width: auto;
 }`;
 
-const DatosCuriosos = props => {
+const DatosCuriosos = (props) => {
 
     const siguiente = () => {
         props.siguientePregunta();
@@ -23,7 +23,7 @@ const DatosCuriosos = props => {
                 <h1>¿Sabías qué?</h1>
             </div>
             <div className="dato">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, in nesciunt. Aspernatur, molestiae dicta, perspiciatis corrupti praesentium ex deleniti, voluptatem non eum temporibus esse quibusdam nesciunt eveniet sed iste dolor?</p>
+                <p>{props.dato}</p>
             </div>
             <div className="boton">
                 <button onClick={() => siguiente()}>Siguiente</button>

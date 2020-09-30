@@ -16,7 +16,7 @@ const MenuPrincipal = ({ iniciar }) => {
         <div>
             <div className="menu-container">
                 <style>{styles}</style>
-                <h1 className="title">Main</h1>
+                <h1 className="title">Preguntas Biota</h1>
                 <div className="boton">
                     <button className="btn" onClick={iniciar}>Iniciar</button>
                 </div>

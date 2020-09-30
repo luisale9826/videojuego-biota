@@ -1,20 +1,22 @@
 .datos-curiosos-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 
 .datos-curiosos-container .titulo {
-    margin: 70px 0px 0px 50px;
+    margin-top: 60px;
+    margin-left: 50px;
     text-align: center;
-    grid-column: 1/2;
+    grid-column: 1/6;
+    font-size: 30px;
 }
 
 .datos-curiosos-container .dato {
-    margin: 0px 0px 0px 50px;
-    text-align: left;
-    grid-column: 1/2;
-    padding-top: 20px;
+    padding-left: 50px;
+    padding-top: 40px;
+    text-align: justify;
+    grid-column: 1/6;
+    font-size: 40px;
 }
 
 .datos-curiosos-container .boton {
@@ -27,16 +29,28 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .datos-curiosos-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .datos-curiosos-container .titulo {
+        margin-top: 60px;
+        text-align: center;
+        grid-column: 1/1;
+        font-size: 20px;
+    }
+
     .datos-curiosos-container .boton > button {
         width: 200px;
         height: 50px;
     }
 
     .datos-curiosos-container .dato {
-        margin: 0px 0px 0px 50px;
-        text-align: left;
-        grid-column: 1/2;
-        padding-top: 0px;
+        grid-column: 1/1;
+        font-size: 20px;
+        padding-top: 50px;
+        padding-right: 20px;
     }    
     
 }

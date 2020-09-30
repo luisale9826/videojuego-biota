@@ -12,7 +12,12 @@ body{
 
 
 const Preguntas = props => {
-    const { pregunta, opciones, respuesta } = props.preguntaActual
+    const { pregunta, opciones, respuesta, datosAdicionales } = props.preguntaActual
+
+    let adicional = <p></p>
+    if (datosAdicionales !== "") {
+        adicional = <p>{datosAdicionales}</p>
+    }
 
     const esCorrecto = (opcionUsuario, respuestaPregunta) => {
         props.revisar(opcionUsuario, respuestaPregunta)
@@ -20,6 +25,9 @@ const Preguntas = props => {
 
     return (
         <div className="preguntas-container">
+            <article className="adicionales">
+                {adicional}
+            </article>
             <article className="pregunta">
                 <p>{pregunta}</p>
             </article>
