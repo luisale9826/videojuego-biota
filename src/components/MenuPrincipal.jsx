@@ -11,14 +11,14 @@ body{
     width: auto;
 }`;
 
-const MenuPrincipal = ({ iniciar }) => {
+const MenuPrincipal = ({ mostrarInstrucciones }) => {
     return (
         <div>
             <div className="menu-container">
                 <style>{styles}</style>
                 <h1 className="title">Preguntas Biota</h1>
                 <div className="boton">
-                    <button className="btn" onClick={iniciar}>Iniciar</button>
+                    <button className="btn" onClick={mostrarInstrucciones}>Iniciar</button>
                 </div>
                 <div className="images">
                     <img src={logoBiota} alt="Biota" className={'biota'} />

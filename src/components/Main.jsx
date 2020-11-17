@@ -32,8 +32,12 @@ const Main = () => {
         return datos[Math.floor(Math.random() * (i + 1))]
     }
 
+    const mostrarIntrucciones = () => {
+        setEstado('instrucciones')
+    }
+
     const iniciar = () => {
-        setEstado('pregunta')
+        setTimeout(() => setEstado('pregunta'), 10000);
     }
 
     const revisar = (respuestaUsuario, respuesta) => {
@@ -59,6 +63,10 @@ const Main = () => {
         case 'iniciado':
             contenido = <Preguntas preguntaActual={listado[indiceActual]} revisar={revisar} />
             break;
+        case 'instrucciones':
+            contenido = <Informe informe={"instrucciones"} />
+            iniciar();
+            break;
         case 'error':
             contenido = <Informe informe={"error"} />
             setTimeout(() => setEstado("finalizado"), 3000)
@@ -78,7 +86,7 @@ const Main = () => {
             contenido = <Resultados reiniciar={reiniciar} puntaje={(indiceActual) * 1000} />
             break;
         default:
-            contenido = <MenuPrincipal iniciar={iniciar} />
+            contenido = <MenuPrincipal mostrarInstrucciones={mostrarIntrucciones} />
             break;
     }
 

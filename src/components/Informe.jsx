@@ -15,6 +15,18 @@ const Informe = ({ informe, preguntaActual, totalPreguntas }) => {
     let contenido = '';
 
     switch (informe) {
+        case 'instrucciones':
+            contenido = (
+                <div className="instrucciones-container">
+                    <div className="titulo">
+                        <h1>Instrucciones</h1>
+                    </div>
+                    <div className="instrucciones">
+                        <h2>A cada pregunta seleccione la opción correspondiente haciendo click sobre la misma, el juego se acaba cuando se respondan todas las preguntas correctamente o se falle en alguna pregunta</h2>
+                    </div>
+                </div>
+            )
+            break;
         case 'correcto':
             contenido = (
                 <div className="titulo">

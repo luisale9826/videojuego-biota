@@ -10,12 +10,41 @@
     font-size: 60px;
 }
 
+.informe-container .instrucciones-container {
+    display: grid;
+    grid-template-rows: 2, 1fr;
+}
+
+.informe-container .instrucciones-container .titulo {
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+.informe-container .instrucciones-container .instrucciones {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 30px;
+}
+
 @media only screen and (max-width: 768px) {
     .informe-container .titulo {
         margin-top: 200px;
         text-align: center;
         text-transform: uppercase;
         font-size: 20px;
+    }
+
+    .informe-container .instrucciones-container .titulo {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+    
+    .informe-container .instrucciones-container .instrucciones {
+        text-align: center;
+        font-size: 15px;
     }
     
 }
