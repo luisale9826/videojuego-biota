@@ -22,12 +22,25 @@
     margin-top: 100px;
 }
 
+.menu-container > .subtitle {
+    padding-top: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 45px;
+}
+
 @media only screen and (max-width: 768px) {
     .menu-container > .title {
         margin-top: 100px;
         text-align: center;
         text-transform: uppercase;
         font-size: 60px;
+    }
+
+    .menu-container > .subtitle {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
     }
 
     .menu-container > .images img {

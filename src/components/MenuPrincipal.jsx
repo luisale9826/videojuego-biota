@@ -20,6 +20,7 @@ const MenuPrincipal = ({ mostrarInstrucciones }) => {
                 <div className="boton">
                     <button className="btn" onClick={mostrarInstrucciones}>Iniciar</button>
                 </div>
+                    <h2 className="subtitle">Aprende sobre la naturaleza y diviertete</h2>
                 <div className="images">
                     <img src={logoBiota} alt="Biota" className={'biota'} />
                 </div>
